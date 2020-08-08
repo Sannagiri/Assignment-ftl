@@ -14,7 +14,7 @@ class User(models.Model):
         return self.id
 
 class ActivityPeriod(models.Model):
-    user = models.ForeignKey(User,null=True,blank=True,on_delete=models.SET_NULL,related_name='activity_periods')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='activity_periods')
     start_time = models.CharField(max_length=50, blank=True, null=True)
     end_time = models.CharField(max_length=50, blank=True, null=True)
 
