@@ -71,7 +71,7 @@ for this project two models are created namely User and ActivityPeriod
 	    - tz (characterfield, default=UTC)			# timezone of the user
 
     User ActivityPeriod
-	    - user (foreignkey)				# used to access User Model
+	    - user (foreignkey,on_delete=models.CASCADE)# used to access User Model
 	    - start_time(characterfield, maxlength=50) 	# start time of the activity period of user
 	    - end_time(characterfield, maxlength=50) 	# end time of the activity period of user
 
